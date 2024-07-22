@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/balascode/srikrishnajyotishyalayam.git/static/css/main.8c3605a3.css",
+    "main.js": "/balascode/srikrishnajyotishyalayam.git/static/js/main.df05cd66.js",
+    "static/js/453.4991a628.chunk.js": "/balascode/srikrishnajyotishyalayam.git/static/js/453.4991a628.chunk.js",
+    "static/media/bg4.gif": "/balascode/srikrishnajyotishyalayam.git/static/media/bg4.d4dd699916595f2976c7.gif",
+    "static/media/vastu.png": "/balascode/srikrishnajyotishyalayam.git/static/media/vastu.756b7acbf21b0967e1ca.png",
+    "static/media/medical.png": "/balascode/srikrishnajyotishyalayam.git/static/media/medical.250510e869eecefa555f.png",
+    "static/media/Business.png": "/balascode/srikrishnajyotishyalayam.git/static/media/Business.1026d761ca22213f356f.png",
+    "static/media/bghoro2.png": "/balascode/srikrishnajyotishyalayam.git/static/media/bghoro2.0781224d99e4aef3058f.png",
+    "static/media/numerology.png": "/balascode/srikrishnajyotishyalayam.git/static/media/numerology.141a03c1ee2edfe6687a.png",
+    "static/media/marriage.png": "/balascode/srikrishnajyotishyalayam.git/static/media/marriage.dcd6cd6660c9ae8d627c.png",
+    "static/media/bgimg2.jpg": "/balascode/srikrishnajyotishyalayam.git/static/media/bgimg2.54136e338d9ddff69365.jpg",
+    "static/media/bgimg.jpg": "/balascode/srikrishnajyotishyalayam.git/static/media/bgimg.5cc7e965e7477238c276.jpg",
+    "static/media/bootstrap-icons.woff?": "/balascode/srikrishnajyotishyalayam.git/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/balascode/srikrishnajyotishyalayam.git/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "index.html": "/balascode/srikrishnajyotishyalayam.git/index.html",
+    "main.8c3605a3.css.map": "/balascode/srikrishnajyotishyalayam.git/static/css/main.8c3605a3.css.map",
+    "main.df05cd66.js.map": "/balascode/srikrishnajyotishyalayam.git/static/js/main.df05cd66.js.map",
+    "453.4991a628.chunk.js.map": "/balascode/srikrishnajyotishyalayam.git/static/js/453.4991a628.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c3605a3.css",
+    "static/js/main.df05cd66.js"
+  ]
+}
