@@ -1,0 +1,94 @@
+.home-container {
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  background-image: url('../images/bg4.gif');
+  padding-bottom: 30px;
+}
+
+.space{
+  height: 20vh;
+}
+
+.space2{
+  height: 20vh;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  width: 50%;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+  border-radius: 8px;
+  animation: popUp 1s ease-out;
+}
+
+.contentblw {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+  border-radius: 8px;
+  animation: popUp 1s ease-out;
+  width: 60%;
+}
+
+.blw {
+  font-size: 25px;
+}
+
+.bgreview{
+  background-color: #0e4d66 !important;
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.content h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1rem;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.additional-section {
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.additional-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.additional-section p {
+  font-size: 1.10rem;
+}
+
+.services{
+  margin-top: 100px;
+}

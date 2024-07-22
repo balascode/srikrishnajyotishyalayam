@@ -1,0 +1,20 @@
+.wholeform{
+    border-radius: 20px;
+    background-color: #f59790;
+}
+
+.cont-frm{
+   background-color: #b85d56;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+  }
+  

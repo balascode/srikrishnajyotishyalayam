@@ -1,0 +1,37 @@
+.about-us {
+  padding: 50px 0;
+  overflow: hidden;
+  background-color: #374e8c; /* Ensure the image doesn't overflow the container */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 2s ease-in-out; /* Apply the animation on page load */
+  animation-fill-mode: forwards; /* Keep the animation state after it finishes */
+}
+
+.para {
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+/* Define the slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%); /* Start off-screen to the left */
+    opacity: 0; /* Start with no opacity */
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* Full opacity */
+  }
+}
