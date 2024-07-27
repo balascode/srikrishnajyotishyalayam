@@ -31,8 +31,6 @@
   transform: translateX(-50%);
   top: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-style: solid;
-  border-color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,9 +50,9 @@
   font-size: 1.1rem;
   font-family: monospace;
   font-weight: bold;
-  border-style: solid;
   border-radius: 50%;
   background-color:#f08048;
+  border-style: none;
   height: 40px;
   width: 40px;
   cursor: pointer;

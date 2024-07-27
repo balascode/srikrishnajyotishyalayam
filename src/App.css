@@ -28,7 +28,8 @@ body {
 }
 
 .scrolling-text-container {
-  background-color: #deae2a;
+  background-color: #e1c826;
+  color: #000000;
   overflow: hidden;
 }
 

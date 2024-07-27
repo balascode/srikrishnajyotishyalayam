@@ -52,7 +52,7 @@ function App() {
       <div className="d-flex flex-column min-vh-100">
         <div className="scrolling-text-container" onMouseEnter={handleHover} onMouseLeave={handleHover}>
           <div className="scrolling-text">
-            Welcome to our page! Explore our services and discover more.
+            Expertise in Vastu and Vedic Astrology
           </div>
         </div>
         <CustomNavbar />

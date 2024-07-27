@@ -76,10 +76,7 @@ const Reviews = () => {
   return (
     <section className="reviews">
       <div className="container">
-        <button className="add-review-btn" onClick={() => setShowForm(true)}>
-          Add Review
-        </button>
-        <h2 className="section-title">Client Reviews</h2>
+        <h2 className="section-title text-center"> Client Reviews </h2>
         <div className="review-list">
           {reviews.map((review) => (
             <div key={review.id} className="review">
@@ -99,6 +96,11 @@ const Reviews = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className='text-end'>
+        <button className="add-review-btn" onClick={() => setShowForm(true)}>
+          Add Review
+        </button>
         </div>
         {showForm && (
           <div className="modal">

@@ -2,8 +2,14 @@
   background-size: cover;
   background-position: center;
   height: 90vh;
-  background-image: url('../images/bg4.gif');
+  background-image: url('../images/homebg1.jpg.png');
   padding-bottom: 30px;
+}
+
+#innerbg{
+  width:100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.3);
 }
 
 .space{
@@ -16,20 +22,17 @@
 
 .content {
   text-align: center;
-  color: white;
+  color: #fff;
   z-index: 1;
-  width: 50%;
   margin: 20px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
   border-radius: 8px;
   animation: popUp 1s ease-out;
 }
 
 .contentblw {
   text-align: center;
-  color: white;
+  color: #FFDF00 !important;
   z-index: 1;
   margin: 20px;
   padding: 20px;
@@ -41,11 +44,12 @@
 }
 
 .blw {
-  font-size: 25px;
+  font-size: 20px;
+  color: #FFDF00;
 }
 
 .bgreview{
-  background-color: #0e4d66 !important;
+  background-color: #fff !important;
 }
 
 @keyframes popUp {
@@ -59,9 +63,10 @@
   }
 }
 
+
 .content h1 {
-  font-size: 2rem;
-  color: white;
+  font-size: 3rem;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -89,6 +94,155 @@ body {
   font-size: 1.10rem;
 }
 
+.buttn{
+  animation: highlightAnimation 3s infinite;
+  font-size: 20px;
+  width: 150px;
+  height: 50px;
+}
+
+#services{
+  background-color: #fff !important;
+}
+
 .services{
   margin-top: 100px;
+}
+
+.service-card .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.service-card:hover .card {
+  transform: translateY(-10px) rotate(3deg);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes highlightAnimation {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(0.95);
+  }
+}
+
+.highlight {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+  animation: highlightAnimation 5s infinite;
+}
+
+
+
+.services-complete{
+  background-color: #e8af10;
+  border-radius: 10px;
+  width: 100%;
+}  
+
+.card{
+  background-color: #FFDF00;
+  height: 15rem;
+}
+
+.card-title{
+  color: #62f00ad7;
+  font-size: 1.5rem;
+}
+
+.bgh{
+  /* background-image: url('../images/bghoro2.png'); */
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.bgv{
+  background-image: url('../images/vastu.png');
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.bgn{
+  background-image: url('../images/numerology.png');
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.bgbu{
+  background-image: url('../images/Business.png');
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.bgmd{
+  background-image: url('../images/medical.png');
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.bgmarriage{
+  background-image: url('../images/marriage.png');
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.card-p{
+  color: #ed790c;
+  font-size: 1.25rem;
+}
+
+.about-us {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff !important; 
+}
+
+.about-us-title{
+  font-size: 2.0rem;
+  font-family: "Poppins";
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.section-title {
+  font-size: 2.0rem !important;
+  margin-bottom: 30px;
+  color: #000000 !important;
+  font-family: "Poppins";
+  text-align: left;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.para {
+  font-size: 16px;
+  color: #000000;
+  font-family: "Poppins";
+  text-align: left;
+}
+
+.vedic {
+  background-color: #3a88d6;
+}
+
+.vedic-img {
+  width: 100% !important;
+  height: 55vh;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }

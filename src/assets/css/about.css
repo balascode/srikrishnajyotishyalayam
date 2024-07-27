@@ -1,37 +1,76 @@
 .about-us {
   padding: 50px 0;
   overflow: hidden;
-  background-color: #374e8c; /* Ensure the image doesn't overflow the container */
+  background-color: #FFDF00; 
 }
 
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 30px;
+  color: #000000 !important;
+  font-family: "Poppins";
+  text-align: left;
 }
 
 .about-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-top: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  animation: slideIn 2s ease-in-out; /* Apply the animation on page load */
-  animation-fill-mode: forwards; /* Keep the animation state after it finishes */
 }
 
 .para {
-  padding-left: 20px;
-  font-size: 15px;
+  font-size: 16px;
+  color: #000000;
+  font-family: "Poppins";
+  text-align: left;
 }
 
-/* Define the slide-in animation */
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%); /* Start off-screen to the left */
-    opacity: 0; /* Start with no opacity */
-  }
-  to {
-    transform: translateX(0); /* End at the original position */
-    opacity: 1; /* Full opacity */
-  }
+.vedic {
+  background-color: #3a88d6;
 }
+
+.vedic-img {
+  width: 46vw;
+  height: 55vh;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000000;
+  opacity: 1;
+  border-radius: 10px;
+  width: 90%;
+}
+
+
+.success {
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+}
+
+.ssp{
+  font-size: 40px;
+  font-weight: normal;
+}
+
+
+.vrl{
+  width: 1px;
+  height: 60px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.cmnt{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+

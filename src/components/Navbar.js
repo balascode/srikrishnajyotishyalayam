@@ -3,12 +3,14 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import '../assets/css/navbar.css';
 
-const CustomNavbar = ({ onFormClick }) => {
+const CustomNavbar = () => {
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 100;
+      console.log('Scroll Position:', window.scrollY);
+      console.log('Is Navbar Fixed:', isScrolled);
       setIsNavbarFixed(isScrolled);
     };
 
@@ -19,33 +21,29 @@ const CustomNavbar = ({ onFormClick }) => {
   }, []);
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className={`custom-navbar p-4 ${isNavbarFixed ? 'navbar-scrolled' : ''}`}>
-      <Navbar.Brand href="/">
-        <img src='' alt='' className=''/>
-        Sri Krishna Jyothishalayam
-      </Navbar.Brand>
+    <Navbar bg="warning" variant="text-dark" expand="lg" className={`custom-navbar p-4 ${isNavbarFixed ? 'navbar-scrolled' : ''}`}>
+      <Navbar.Brand href="/" className='ms-4'>Sri Krishna Jyothishalayam</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
           <LinkContainer to="/">
-            <Nav.Link>Home</Nav.Link>
+            <Nav.Link className='text-dark'>Home</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/about">
-            <Nav.Link>About</Nav.Link>
+            <Nav.Link className='text-dark'>About</Nav.Link>
           </LinkContainer>
-          <NavDropdown title="Services" id="basic-nav-dropdown">
+          <NavDropdown className='text-dark' title="Services" id="basic-nav-dropdown">
+            <div className='dp'>
             <LinkContainer to="/Horoscope">
-              <NavDropdown.Item>Horoscope</NavDropdown.Item>
+              <NavDropdown.Item >Horoscope</NavDropdown.Item>
             </LinkContainer>
-            <LinkContainer to="/Numerology">
+            <LinkContainer to="/Numerology" >
               <NavDropdown.Item>Numerology</NavDropdown.Item>
             </LinkContainer>
+            </div>
           </NavDropdown>
-          <LinkContainer to="/form">
-            <Nav.Link> Form </Nav.Link>
-          </LinkContainer>
           <LinkContainer to="/reviews">
-            <Nav.Link>Reviews</Nav.Link>
+            <Nav.Link className='text-dark'>Reviews</Nav.Link>
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>
