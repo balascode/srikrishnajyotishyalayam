@@ -1,7 +1,7 @@
 .about-us {
   padding: 50px 0;
   overflow: hidden;
-  background-color: #FFDF00; 
+  background-color: #FFDF00 !important; 
 }
 
 .section-title {

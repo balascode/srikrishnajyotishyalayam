@@ -82,8 +82,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="about" className="p-0">
-      <section className="about-us">
+      <div id="about" className="">
+      <section className="about-us-home pt-5 pb-5">
       <Container>
         <Row>
          <h1 className="text-start mb-4 about-us-title"> About Us </h1>
