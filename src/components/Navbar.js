@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
+import navimg from '../assets/images/nav-img.jpg';
 import '../assets/css/navbar.css';
 
 const CustomNavbar = () => {
@@ -9,8 +10,6 @@ const CustomNavbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 100;
-      console.log('Scroll Position:', window.scrollY);
-      console.log('Is Navbar Fixed:', isScrolled);
       setIsNavbarFixed(isScrolled);
     };
 
@@ -21,30 +20,27 @@ const CustomNavbar = () => {
   }, []);
 
   return (
-    <Navbar bg="warning" variant="text-dark" expand="lg" className={`custom-navbar p-4 ${isNavbarFixed ? 'navbar-scrolled' : ''}`}>
-      <Navbar.Brand href="/" className='ms-4'>Sri Krishna Jyothishalayam</Navbar.Brand>
+    <Navbar bg="warning" variant="text-dark" expand="lg" className={`custom-navbar p-2 ${isNavbarFixed ? 'navbar-scrolled' : ''}`}>
+      <Navbar.Brand href="/" className='ms-4 d-flex flex-row'>
+      <img src={navimg} className='nav-img'/>
+      <h1 className='head-nav d-flex flex-column justify-content-center mt-2 ml-2'>SRI KRISHNA JYOTHISHALAYAM </h1>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          <LinkContainer to="/">
-            <Nav.Link className='text-dark'>Home</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/about">
-            <Nav.Link className='text-dark'>About</Nav.Link>
-          </LinkContainer>
+          <Link to="/" className="nav-link text-dark">Home</Link>
+          <Link to="/about" className="nav-link text-dark">About</Link>
           <NavDropdown className='text-dark' title="Services" id="basic-nav-dropdown">
             <div className='dp'>
-            <LinkContainer to="/Horoscope">
-              <NavDropdown.Item >Horoscope</NavDropdown.Item>
-            </LinkContainer>
-            <LinkContainer to="/Numerology" >
-              <NavDropdown.Item>Numerology</NavDropdown.Item>
-            </LinkContainer>
+              <NavDropdown.Item as={Link} to="/services#Horoscope">Horoscope</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/services#Vastu"> Vastu Shastra</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/services#Numerology">Numerology</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/services#Business">Business Astrology</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/services#Medical">Medical Astrology</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/services#Marriage">Marriage Astrology</NavDropdown.Item>
             </div>
           </NavDropdown>
-          <LinkContainer to="/reviews">
-            <Nav.Link className='text-dark'>Reviews</Nav.Link>
-          </LinkContainer>
+          <Link to="/reviews" className="nav-link text-dark">Reviews</Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

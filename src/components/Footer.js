@@ -12,24 +12,24 @@ library.add(faInstagram, faSquareFacebook, faLinkedin, faEnvelope, faLocationDot
 
 const Footer = () => (
   <footer className="footer bg-dark text-white text-start mt-auto">
-    <Container className='pt-4'>
+    <Container className='pt-4 pl-3'>
       <Row>
-      <Col md={4} className="d-flex flex-row justify-content-center">
+      <Col md={4} xs={12} className="d-flex flex-row justify-content-md-center justify-content-xs-start">
         <div className='text-start'>
-        <LinkContainer to="/about" className='underline'>
+        <LinkContainer to="/about">
             <Nav.Link> <h5> Sri Krishna Jyothishalayam </h5></Nav.Link>
           </LinkContainer>
-          <p> Expertise in vastu and vedic astrology <br/> 25+ Years Experience with 95% of Success</p>
-          <div class="d-flex flex-row mt-4">
+          <p> Expertise in vastu and vedic astrology <br/> 25+ Years Experience with 99% of Success</p>
+          <div className="d-flex flex-row mt-4">
           <FontAwesomeIcon icon={['fab', 'square-facebook']} className="mr-4 font" />
           <FontAwesomeIcon icon={['fab', 'instagram']} className="mr-4 font" />
           <FontAwesomeIcon icon={['fab', 'linkedin']} className="font" />
           </div>
         </div>
         </Col>
-        <Col md={4} className="d-flex flex-row justify-content-center">
+        <Col md={4} xs={12} className="d-flex flex-row justify-content-md-center justify-content-xs-start">
         <div className='text-start'>
-          <h5 className='underline'>Main Links</h5>
+          <h5 >Main Links</h5>
           <LinkContainer to="/faq">
             <Nav.Link>FAQ</Nav.Link>
           </LinkContainer>
@@ -41,7 +41,7 @@ const Footer = () => (
           </LinkContainer>
           </div>
         </Col>
-        <Col md={4} className="d-flex flex-row justify-content-center">
+        <Col md={4} xs={12} className="d-flex flex-row justify-content-md-center justify-content-xs-start mb-5">
         <div className='text-start'>
           <h5 className='underline'>Contact Us</h5>
           <p> <FontAwesomeIcon icon={['fas', 'envelope']} className="mr-2 font1"/> Email: info@astroconsultant.com</p>

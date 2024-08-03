@@ -12,12 +12,10 @@ const RegistrationForm = () => {
     TimeOfBirth: '',
     PlaceOfBirth: '',
     ResidentialAddress: '',
-    CompanyAddress: '',
     WhatsappNumber: '',
     Occupation: '',
     Hobbies: '',
     PurposeOfVisit: '',
-    Date: '',
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -54,8 +52,8 @@ const RegistrationForm = () => {
     const requiredFields = [
       'Name', 'Age', 'Gender', 'MaritalStatus', 'DateOfBirth',
       'TimeOfBirth', 'PlaceOfBirth', 'ResidentialAddress',
-      'CompanyAddress', 'WhatsappNumber', 'Occupation', 'Hobbies',
-      'PurposeOfVisit', 'Date'
+       'WhatsappNumber', 'Occupation', 'Hobbies',
+      'PurposeOfVisit'
     ];
 
     requiredFields.forEach(field => {
@@ -135,12 +133,10 @@ const RegistrationForm = () => {
             TimeOfBirth: '',
             PlaceOfBirth: '',
             ResidentialAddress: '',
-            CompanyAddress: '',
             WhatsappNumber: '',
             Occupation: '',
             Hobbies: '',
             PurposeOfVisit: '',
-            Date: '',
           });
         } else {
           console.error("Submission failed");
@@ -156,7 +152,7 @@ const RegistrationForm = () => {
 
   return (
     <div className='cont-frm p-5'>
-      <Container fluid className='wholeform pt-5 p-3 w-50 lg-shadow'>
+      <Container fluid className='wholeform pt-5 p-3 w-100 lg-shadow'>
         <h1 className="text-center">SRI KRISHNA JYOTHISHALAYAM</h1>
         <h2 className="text-center">(A True Vedic Solution)</h2>
         <h3 className="text-center">Specialization in Vedic Astrology & Vaastu</h3>
@@ -174,9 +170,9 @@ const RegistrationForm = () => {
             {formErrors.Name && <Form.Text className="text-danger">{formErrors.Name}</Form.Text>}
           </Form.Group>
 
-          <Row className='mb-3'>
-            <Col>
-              <Form.Group controlId="formAge">
+          <Row>
+            <Col md={4} xs={12}>
+              <Form.Group controlId="formAge"  className='mb-3'>
                 <Form.Label className='mb-0'>Age:</Form.Label>
                 <Form.Control
                   type="text"
@@ -187,8 +183,8 @@ const RegistrationForm = () => {
                 {formErrors.Age && <Form.Text className="text-danger">{formErrors.Age}</Form.Text>}
               </Form.Group>
             </Col>
-            <Col>
-              <Form.Group controlId="formGender">
+            <Col md={4} xs={12}>
+              <Form.Group controlId="formGender" className='mb-3'>
                 <Form.Label className='mb-0'>Gender:</Form.Label>
                 <Form.Control
                   as="select"
@@ -203,8 +199,8 @@ const RegistrationForm = () => {
                 {formErrors.Gender && <Form.Text className="text-danger">{formErrors.Gender}</Form.Text>}
               </Form.Group>
             </Col>
-            <Col>
-              <Form.Group controlId="formMaritalStatus">
+            <Col md={4} xs={12}>
+              <Form.Group controlId="formMaritalStatus" className='mb-3'>
                 <Form.Label className='mb-0'>Marital Status:</Form.Label>
                 <Form.Control
                   as="select"
@@ -221,9 +217,9 @@ const RegistrationForm = () => {
             </Col>
           </Row>
 
-          <Row className='mb-3'>
-            <Col>
-              <Form.Group controlId="formDateOfBirth">
+          <Row>
+            <Col md={6} xs={12}>
+              <Form.Group controlId="formDateOfBirth" className='mb-3'>
                 <Form.Label className='mb-0'>Date of Birth:</Form.Label>
                 <Form.Control
                   type="date"
@@ -234,8 +230,8 @@ const RegistrationForm = () => {
                 {formErrors.DateOfBirth && <Form.Text className="text-danger">{formErrors.DateOfBirth}</Form.Text>}
               </Form.Group>
             </Col>
-            <Col>
-              <Form.Group controlId="formTimeOfBirth">
+            <Col md={6} xs={12}>
+              <Form.Group controlId="formTimeOfBirth" className='mb-3'>
                 <Form.Label className='mb-0'>Time of Birth:</Form.Label>
                 <Form.Control
                   type="time"
@@ -270,17 +266,6 @@ const RegistrationForm = () => {
             {formErrors.ResidentialAddress && <Form.Text className="text-danger">{formErrors.ResidentialAddress}</Form.Text>}
           </Form.Group>
 
-          <Form.Group controlId="formCompanyAddress" className='mb-3'>
-            <Form.Label className='mb-0'>Company Address:</Form.Label>
-            <Form.Control
-              as="textarea"
-              name="CompanyAddress"
-              value={formData.CompanyAddress}
-              onChange={handleChange}
-            />
-            {formErrors.CompanyAddress && <Form.Text className="text-danger">{formErrors.CompanyAddress}</Form.Text>}
-          </Form.Group>
-
           <Form.Group controlId="formWhatsappNumber" className='mb-3'>
             <Form.Label className='mb-0'>WhatsApp Number:</Form.Label>
             <Form.Control
@@ -292,9 +277,9 @@ const RegistrationForm = () => {
             {formErrors.WhatsappNumber && <Form.Text className="text-danger">{formErrors.WhatsappNumber}</Form.Text>}
           </Form.Group>
 
-          <Row className='mb-3'>
-            <Col>
-              <Form.Group controlId="formOccupation">
+          <Row>
+            <Col md={6} xs={12}>
+              <Form.Group controlId="formOccupation" className='mb-3'>
                 <Form.Label className='mb-0'>Occupation:</Form.Label>
                 <Form.Control
                   type="text"
@@ -305,8 +290,8 @@ const RegistrationForm = () => {
                 {formErrors.Occupation && <Form.Text className="text-danger">{formErrors.Occupation}</Form.Text>}
               </Form.Group>
             </Col>
-            <Col>
-              <Form.Group controlId="formHobbies">
+            <Col md={6} xs={12}>
+              <Form.Group controlId="formHobbies" className='mb-3'>
                 <Form.Label className='mb-0'>Hobbies:</Form.Label>
                 <Form.Control
                   type="text"
@@ -330,16 +315,6 @@ const RegistrationForm = () => {
             {formErrors.PurposeOfVisit && <Form.Text className="text-danger">{formErrors.PurposeOfVisit}</Form.Text>}
           </Form.Group>
 
-          <Form.Group controlId="formDate" className='mb-3'>
-            <Form.Label className='mb-0'>Date:</Form.Label>
-            <Form.Control
-              type="date"
-              name="Date"
-              value={formData.Date}
-              onChange={handleChange}
-            />
-            {formErrors.Date && <Form.Text className="text-danger">{formErrors.Date}</Form.Text>}
-          </Form.Group>
           
           <div className='text-center'>
             <Button type="submit" disabled={isLoading}>

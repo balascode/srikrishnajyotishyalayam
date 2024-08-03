@@ -14,10 +14,9 @@ import Testimonials from './components/Testimonials';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import Reviews from './components/Reviews';
-import HoroScope from './components/HoroScope';
-import Numerology from './components/Numerology';
 import ReviewsCarousel from './components/ReviewsCarousel';
 import Form from './components/form';
+import Services from './components/Services';
 import './App.css';
 
 function App() {
@@ -46,7 +45,6 @@ function App() {
     setIsHovered(!isHovered);
   };
 
-
   return (
     <Router>
       <div className="d-flex flex-column min-vh-100">
@@ -60,8 +58,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/Horoscope" element={<HoroScope />} />
-            <Route path="/Numerology" element={<Numerology />} />
             <Route path="/consultants" element={<Consultants />} />
             <Route path="/consultant/:id" element={<ConsultantProfile />} />
             <Route path="/form" element={<Form />} />
@@ -74,6 +70,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/reviews" element={<Reviews />} />
+            <Route path="/services" element={<Services />} />
           </Routes>
         </main>
         <Footer />

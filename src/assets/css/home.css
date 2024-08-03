@@ -99,6 +99,8 @@ body {
   font-size: 20px;
   width: 150px;
   height: 50px;
+  background-color: #FFDF00;
+  color: #000;
 }
 
 #services{
@@ -119,6 +121,17 @@ body {
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
 
+.service-card-link {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.service-card-link:hover,
+.service-card-link:focus,
+.service-card-link:active {
+  text-decoration: none; 
+}
+
 @keyframes highlightAnimation {
   0% {
     opacity: 0.8;
@@ -135,63 +148,63 @@ body {
 }
 
 .highlight {
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
   animation: highlightAnimation 5s infinite;
+  /* background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.5); */
+  padding: 0px;
 }
 
 
 
 .services-complete{
-  background-color: #e8af10;
+  background-color: #FFDF00;
   border-radius: 10px;
   width: 100%;
 }  
 
 .card{
-  background-color: #FFDF00;
-  height: 15rem;
+  background-color: #fced42;
+  height: 16rem;
 }
 
 .card-title{
-  color: #62f00ad7;
+  color: #000;
   font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Poppins";
 }
 
 .bgh{
-  background-image: url('../images/bghoro2.png');
-  background-size: cover;
-  border-radius: 15px;
+  /* background-image: url('../images/horo2.jpg'); */
+  border-radius: 150px;
+  width: 50%;
 }
 
 .bgv{
-  background-image: url('../images/vastu.png');
-  background-size: cover;
-  border-radius: 15px;
+  /* background-image: url('../images/vastu2.png'); */
+  border-radius: 150px;
+  width: 50%;
 }
 
 .bgn{
-  background-image: url('../images/numerology.png');
-  background-size: cover;
-  border-radius: 15px;
+  /* background-image: url('../images/numerology2.png'); */
+  border-radius: 150px;
+  width: 50%;
 }
 
 .bgbu{
-  background-image: url('../images/Business.png');
-  background-size: cover;
-  border-radius: 15px;
+  border-radius: 150px;
+  width: 50%;
 }
 
 .bgmd{
-  background-image: url('../images/medical.png');
-  background-size: cover;
-  border-radius: 15px;
+  border-radius: 150px;
+  width: 50%;
 }
 
 .bgmarriage{
-  background-image: url('../images/marriage.png');
-  background-size: cover;
-  border-radius: 15px;
+  border-radius: 150px;
+  width: 50%;
 }
 
 .card-p{

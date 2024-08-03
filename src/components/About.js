@@ -6,7 +6,7 @@ import '../assets/css/about.css'; // Ensure your CSS file path is correct
 import aboutImage from '../assets/images/bgimg2.jpg';
 import vedicimage from '../assets/images/vedic.jpg'; // Adjust this path based on your project structure
 
-// gsap.registerPlugin(ScrollTrigger);
+//  gsap.registerPlugin(ScrollTrigger);
 
 const GoogleMapComponent = () => {
   return (
@@ -24,47 +24,55 @@ const GoogleMapComponent = () => {
 };
 
 const AboutUs = () => {
-  useEffect(() => {
-    console.log("useEffect triggered");
+  // useEffect(() => {
+  //   console.log("useEffect triggered");
   
-    gsap.from(".about-image", {
-      scrollTrigger: {
-        trigger: ".about-image",
-        start: "top 80%",
-        end: "bottom 60%",
-      },
-      x: -100,
-      opacity: 0,
-      duration: 1.8,
-      ease: "power3.out"
-    });
+  //   // Check if elements exist
+  //   const aboutImageElement = document.querySelector(".about-image");
+  //   const vedicImageElement = document.querySelector(".vedic-img");
   
-    gsap.from(".vedic-img", {
-      scrollTrigger: {
-        trigger: ".vedic-img",
-        start: "top 80%",
-        end: "bottom 60%",
-      },
-      x: 100,
-      opacity: 0,
-      duration: 1.5,
-      ease: "power3.out"
-    });
+  //   if (aboutImageElement && vedicImageElement) {
+  //     gsap.from(aboutImageElement, {
+  //       scrollTrigger: {
+  //         trigger: aboutImageElement,
+  //         start: "top 80%",
+  //         end: "bottom 60%",
+  //       },
+  //       x: -100,
+  //       opacity: 0,
+  //       duration: 1.5,
+  //       ease: "power3.out"
+  //     });
   
-    console.log("GSAP animations set up");
-  }, []);
+  //     gsap.from(vedicImageElement, {
+  //       scrollTrigger: {
+  //         trigger: vedicImageElement,
+  //         start: "top 80%",
+  //         end: "bottom 60%",
+  //       },
+  //       x: 100,
+  //       opacity: 0,
+  //       duration: 1.5,
+  //       ease: "power3.out"
+  //     });
+  
+  //     console.log("GSAP animations set up");
+  //   } else {
+  //     console.error("Elements not found for animation");
+  //   }
+  // }, []);
   
 
   return (
     <section className="about-us">
       <Container fluid>
-        <Row>
+        <Row className="pr-5  pl-4">
         <Col md={6} className="pl-5 pr-0">
          <img src={aboutImage} alt="About Sri Krishna Jyothishalayam Services" className="about-image" />
         </Col>
         <Col md={6} className="mt-5 pl-4">
         <h2 className="section-title pl-2">Why Consult with Sri Krishna Jyotishalayam?</h2>
-        <p className="text-start para pl-2">
+        <p className="text-start para">
           At Sri Krishna Jyotishalayam, we combine the wisdom of Vedic Astrology with personalized attention to offer you invaluable insights and solutions. Our expert astrologers are dedicated to understanding your unique life circumstances and providing tailored advice that can lead to meaningful improvements in various aspects of your life. Whether you seek clarity in your career, relationships, health, or personal growth, our consultations are designed to empower you with actionable knowledge and a sense of direction. Experience the transformative benefits of Vedic Astrology with us and take the first step towards a brighter, more informed future.
         </p>
         </Col>

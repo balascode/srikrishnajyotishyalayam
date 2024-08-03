@@ -1,10 +1,10 @@
 .wholeform{
     border-radius: 20px;
-    background-color: #e3ae0e;;
+    background-color: #e3ae0e;
 }
 
 .cont-frm{
-   background-color: #f5970a;
+   background-color: #FFDF00;
 }
 
 .alert {
@@ -16,5 +16,12 @@
     background-color: #4CAF50;
     color: white;
     border-radius: 5px;
-  }
+}
+
+@media (min-width: 992px){
+
+   .wholeform{
+    width: 50% !important;
+    }
+}
   

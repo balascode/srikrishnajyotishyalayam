@@ -39,3 +39,15 @@
   background-color: #ff9e1f;
   color: black;
 }
+
+.head-nav{
+  font-size: 20px;
+  font-weight: 700;
+  word-spacing: 1px;
+}
+
+.nav-img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
