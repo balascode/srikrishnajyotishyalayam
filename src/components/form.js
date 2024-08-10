@@ -114,7 +114,7 @@ const RegistrationForm = () => {
     
     setIsLoading(true);
 
-    fetch("https://script.google.com/macros/s/AKfycby7WUns782cuTzyGCzsr6P6vW4jHxLuL7-eekszrMO6AD1rIliefBGPcsgA8zKhLnmx/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzhET9et3bAJ7zOoIDiaR44kvqINAAr-kyXNXho0wRXoEQ6PcKfdrZ1Lxonj0rBs4Wa/exec", {
       method: "POST",
       body: formDatab
     })
