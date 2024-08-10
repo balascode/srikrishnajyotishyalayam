@@ -32,4 +32,10 @@
   border-color: #fff !important;
   width: 95% !important;
 }
+
+@media (max-width:991px){
+  .hr1{
+    width: 100% !important;
+  }
+}
   

@@ -21,9 +21,9 @@ const CustomNavbar = () => {
 
   return (
     <Navbar bg="warning" variant="text-dark" expand="lg" className={`custom-navbar p-2 ${isNavbarFixed ? 'navbar-scrolled' : ''}`}>
-      <Navbar.Brand href="/" className='ms-4 d-flex flex-row'>
+      <Navbar.Brand href="/" className='d-flex flex-row'>
       <img src={navimg} className='nav-img'/>
-      <h1 className='head-nav d-flex flex-column justify-content-center mt-2 ml-2'>SRI KRISHNA JYOTHISHALAYAM </h1>
+      <h1 className='head-nav d-flex flex-column justify-content-center text-start ml-2'> <span className='ml-1'> SRI KRISHNA </span>JYOTHISHALAYAM </h1>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

@@ -116,10 +116,10 @@ body {
   width: 100%;
 }
 
-.service-card:hover .card {
-  transform: translateY(-10px) rotate(3deg);
+/* .service-card:hover .card {
+  
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-}
+} */ 
 
 .service-card-link {
   text-decoration: none; 
@@ -163,25 +163,29 @@ body {
 }  
 
 .card{
-  background-color: #fced42;
-  height: 16rem;
+  border-width: 0px;
+  background-color: transparent;
 }
 
 .card-title{
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 500;
   font-family: "Poppins";
+  margin-top: 10px;
 }
 
 .bgh{
-  /* background-image: url('../images/horo2.jpg'); */
   border-radius: 150px;
   width: 50%;
 }
 
+.bgcmn :hover{
+  transform: translateY(-15px) rotate(0deg);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
 .bgv{
-  /* background-image: url('../images/vastu2.png'); */
   border-radius: 150px;
   width: 50%;
 }
@@ -254,8 +258,59 @@ body {
 
 .vedic-img {
   width: 100% !important;
-  height: 55vh;
-  display: block;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width:991px){
+ 
+  .card-title{
+    font-size: 13px;
+  }
+
+  .services-complete{
+    border-radius: 0px;
+  }
+
+  .about-image, .vedic-img{
+    margin-bottom: 15px;
+    height: 18rem !important;
+  }
+
+  .home-container{
+    height: 35rem;
+  }
+
+  .content h1{
+    font-size: 30px;
+  }
+
+  .buttn{
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+  }
+
+  .section-title{
+    text-align: start;
+    font-size: 26px !important;
+    margin-left: 0px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .para{
+    text-align: start;
+    font-size: 15px !important;
+    margin-left: 0px !important;
+  }
+
+}
+
+@media (min-width:992px){
+
+  .vedic-img, .about-image{
+    height: 20rem;
+  }
+
 }

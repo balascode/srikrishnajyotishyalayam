@@ -1,11 +1,3 @@
-.service-cont{
-    padding: 20px;
-}
-
-.cmn{
-    height: 70% !important;
-}
-
 .title{
     font-size: 30px;
     font-family: "Poppins";
@@ -24,15 +16,13 @@
 }
 
 .all-img{
-    width: 30%;
-    height: 50%;
+    width: 100%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
 .all-img-left{
-    width: 30%;
-    height: 50%;
+    width: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     padding-left: 0px;
@@ -48,6 +38,15 @@
     background-color: #FFDF00;
     border-radius: 20px;
     width: 100%;
+}
+
+@media (max-width:991px){
+    .all-img, .all-img-left{
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 20px; 
+        border-top-left-radius: 20px;  
+        border-bottom-left-radius: 0px;
+    }
 }
   
   

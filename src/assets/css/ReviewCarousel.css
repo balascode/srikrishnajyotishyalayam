@@ -10,10 +10,11 @@
 
 .slider {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 250px;
   overflow: visible;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 0px !important;
@@ -24,6 +25,7 @@
   width: 30rem;
   height: 14rem;
   background-color: #f08048;
+  background-size: cover;
   border-radius: 10px;
   padding: 20px;
   transition: transform 0.5s ease, opacity 0.5s ease, z-index 0s;
@@ -46,7 +48,6 @@
   position: absolute;
   top: 50%;
   color: #fff;
-  background-color: transparent;
   font-size: 1.1rem;
   font-family: monospace;
   font-weight: bold;
@@ -85,7 +86,7 @@
 }
 
 .home-comment {
-  font-size: 14px !important;
+  font-size: 15px !important;
   color: black;
   margin-bottom: auto;
   margin-top: auto;
@@ -110,5 +111,26 @@
 
 .home-rating i {
   color: gold;
-  margin: 0 2px;
+}
+
+
+@media (max-width:991px){
+  .item{
+    width: 12rem;
+    height: 18rem;
+    background-size: cover;
+  }
+
+  #next{
+    right: 20px;
+  }
+
+  #prev{
+    left: 20px;
+  }
+
+  .home-comment{
+    font-size: 13px !important;
+  }
+
 }

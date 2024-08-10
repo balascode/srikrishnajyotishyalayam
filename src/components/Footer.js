@@ -13,11 +13,11 @@ library.add(faInstagram, faSquareFacebook, faLinkedin, faEnvelope, faLocationDot
 const Footer = () => (
   <footer className="footer bg-dark text-white text-start mt-auto">
     <Container className='pt-4 pl-3'>
-      <Row>
-      <Col md={4} xs={12} className="d-flex flex-row justify-content-md-center justify-content-xs-start">
+      <Row className='ms-auto me-auto'>
+      <Col md={4} xs={12} className="d-flex flex-row justify-content-md-center justify-content-xs-start mt-4">
         <div className='text-start'>
         <LinkContainer to="/about">
-            <Nav.Link> <h5> Sri Krishna Jyothishalayam </h5></Nav.Link>
+            <Nav.Link> <h5 className='mb-2'> Sri Krishna Jyothishalayam </h5></Nav.Link>
           </LinkContainer>
           <p> Expertise in vastu and vedic astrology <br/> 25+ Years Experience with 99% of Success</p>
           <div className="d-flex flex-row mt-4">
@@ -27,9 +27,9 @@ const Footer = () => (
           </div>
         </div>
         </Col>
-        <Col md={4} xs={12} className="d-flex flex-row justify-content-md-center justify-content-xs-start">
+        <Col md={4} xs={12} className="d-flex flex-row justify-content-md-center justify-content-xs-start mt-4">
         <div className='text-start'>
-          <h5 >Main Links</h5>
+          <h5 className='mb-2'>Main Links</h5>
           <LinkContainer to="/faq">
             <Nav.Link>FAQ</Nav.Link>
           </LinkContainer>
@@ -41,19 +41,19 @@ const Footer = () => (
           </LinkContainer>
           </div>
         </Col>
-        <Col md={4} xs={12} className="d-flex flex-row justify-content-md-center justify-content-xs-start mb-5">
+        <Col md={4} xs={12} className="d-flex flex-row justify-content-md-center justify-content-xs-start mt-4">
         <div className='text-start'>
-          <h5 className='underline'>Contact Us</h5>
-          <p> <FontAwesomeIcon icon={['fas', 'envelope']} className="mr-2 font1"/> Email: info@astroconsultant.com</p>
-          <p><FontAwesomeIcon icon={['fas', 'phone']} className="mr-2 font1"/> Phone: 99999999999</p>
-          <p> <FontAwesomeIcon icon={['fas', 'location-dot']} className="mr-2 font1"/> 
+          <h5 className='mb-2'>Contact Us</h5>
+          <p className='mb-2'> <FontAwesomeIcon icon={['fas', 'envelope']} className="mr-2 font1"/> Email: info@astroconsultant.com</p>
+          <p className='mb-2'><FontAwesomeIcon icon={['fas', 'phone']} className="mr-2 font1"/> Phone: 99999999999</p>
+          <p className='mb-2'> <FontAwesomeIcon icon={['fas', 'location-dot']} className="mr-2 font1"/> 
           GITAM Medical College, Road,<br/> Yendada, Rushikonda, Visakhapatnam, <br/> Andhra Pradesh 530045
           </p>
         </div>
         </Col>
       </Row>
 
-      <Col md={12} className='d-flex flex-row justify-content-center'> <hr className='hr1'/> </Col>
+      <Col md={12} xs={12} className='d-flex flex-row justify-content-center'> <hr className='hr1'/> </Col>
 
       <Row className="mt-3">
         <Col md={12} className="text-center">

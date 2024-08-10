@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import '../assets/css/ReviewCarousel.css';
 import profile from '../assets/images/prfimg.jpg';
 
@@ -65,7 +66,10 @@ const Slider = () => {
   };
 
   return (
-    <div className="slider mt-3">
+    <Container className='text-center'>
+      <Row className='text-center'> 
+        <Col xs={12}> 
+        <div className="slider mt-3">
       {[...Array(3)].map((_, index) => (
         <div
           key={index}
@@ -73,7 +77,7 @@ const Slider = () => {
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <div className='home-header mb-3'>
+          <div className='home-header'>
             <img src={profile} className="hr-avatar" alt="Profile" />
             <h1 className='home-author'>
               {index === 0 ? 'Neelu Y' :
@@ -96,6 +100,11 @@ const Slider = () => {
       {active !== 0 && <button id="prev" onClick={prev}>&lt;</button>}
       {active !== 2 && <button id="next" onClick={next}>&gt;</button>}
     </div>
+    </Col>
+    </Row>
+    </Container>
+
+    
   );
 };
 
