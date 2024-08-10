@@ -30,17 +30,17 @@ const Services = () => {
   
   useEffect(() => {
   
-    gsap.from(".desc2", {
-      scrollTrigger: {
-        trigger: ".desc2",
-        start: "top 80%",
-        end: "bottom 60%",
-      },
-      x: -100,
-      opacity: 0,
-      duration: 2.0,
-      ease: "power3.out"
-    });
+    // gsap.from(".desc2", {
+    //   scrollTrigger: {
+    //     trigger: ".desc2",
+    //     start: "top 80%",
+    //     end: "bottom 60%",
+    //   },
+    //   x: -100,
+    //   opacity: 0,
+    //   duration: 2.0,
+    //   ease: "power3.out"
+    // });
   
     gsap.from(".desc", {
       scrollTrigger: {
