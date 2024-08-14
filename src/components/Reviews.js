@@ -39,6 +39,27 @@ const Reviews = () => {
       comment: 'I\'m facing with vasu problem after that they have come to my location and suggested me end to end. Now we are able to see good results. Very good people and down to earth',
       rating: 5,
     },
+    {
+      id: 6,
+      author: 'Laxmi Prasanna',
+      avatar: profile,
+      comment: 'Padmalatha Garu is a very accurate and meticulous astrologer who clearly articulates one\'s Rashiphala.I am very much impressed with Madam\'s deep and thorough knowledge in Astrology. She is able to convey past ,present and future with 100 % accuracy. I appreciate her noble approach to help people and I feel very blessed to know her.',
+      rating: 5,
+    },
+    {
+      id: 7,
+      author: 'chodisetti rajesh',
+      avatar: profile,
+      comment: 'Sai padmalatha amma we know her since 18 years she is the best astrologers in visakhapatnam. Her prediction is 100 percent correct about my life. She guided me with simple remedies to overcome many  tough situations such as studies and career, health and finance. Recently she has given us valuable suggestions and remedies regarding my marriage. Whatever the problem u have she will explain in detail and gives clarity with 100 percent confidence that will take you to the next path. Her remedies are very simple and effective. With her vast knowledge of astrology and spiritual practices shri krishna she provides personalized guidance that helps individuals lead a happy and fulfilling life.We are very blessed 🙏🙏🙏',
+      rating: 5,
+    },
+    {
+      id: 8,
+      author: 'APPA RAO',
+      avatar: profile,
+      comment: 'Padmalatha Madam is a great Astrologer,she suggested me to  worship Lord Subramanya Swamy 16 years ago,which brought change in my life and my family life also. Madam predicted about my marriage( when I could get married),as madam said exactly,till 3years completions of my child,I faced many problems then become normal.For any kind of astrology related suggestions,Madam is the best person to contact,which I am doing.',
+      rating: 5,
+    },
   ]);
 
   const [showForm, setShowForm] = useState(false);
@@ -98,51 +119,11 @@ const Reviews = () => {
           ))}
         </div>
         <div className='text-end'>
-        <button className="add-review-btn" onClick={() => setShowForm(true)}>
-          Add Review
-        </button>
+        <a href="https://www.google.com/search?q=sri+krishna+jyothishalayam&oq=sri+krishna+jyothi&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIHCAIQABiABDINCAMQLhivARjHARiABDIHCAQQABiABDIHCAUQABiABDIICAYQABgWGB4yCggHEAAYDxgWGB4yCggIEAAYDxgWGB4yCAgJEAAYFhge0gEJODkzNGoxajE1qAIIsAIB&sourceid=chrome&ie=UTF-8#lrd=0x3a395bafa5f41a73:0x71fd18c7cef04600,3,,,,"> 
+          <button className="add-review-btn"> Add Review </button> 
+        </a>
+        
         </div>
-        {showForm && (
-          <div className="modal">
-            <div className="modal-content">
-              <span className="close" onClick={() => setShowForm(false)}>&times;</span>
-              <form className="review-form" onSubmit={handleFormSubmit}>
-                <h3>Add Your Review</h3>
-                <input
-                  type="text"
-                  name="author"
-                  placeholder="Your Name"
-                  value={newReview.author}
-                  onChange={handleInputChange}
-                  required
-                />
-                <textarea
-                  name="comment"
-                  placeholder="Your Review"
-                  value={newReview.comment}
-                  onChange={handleInputChange}
-                  required
-                />
-                <select
-                  name="rating"
-                  value={newReview.rating}
-                  onChange={handleRatingChange}
-                  required
-                >
-                  <option value="" disabled>
-                    Rating
-                  </option>
-                  {[1, 2, 3, 4, 5].map((rating) => (
-                    <option key={rating} value={rating}>
-                      {rating}
-                    </option>
-                  ))}
-                </select>
-                <button type="submit">Submit Review</button>
-              </form>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
