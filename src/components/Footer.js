@@ -47,7 +47,7 @@ const Footer = () => (
           <p className='mb-2'> <FontAwesomeIcon icon={['fas', 'envelope']} className="mr-2 font1"/> Email: info@astroconsultant.com</p>
           <p className='mb-2'><FontAwesomeIcon icon={['fas', 'phone']} className="mr-2 font1"/> Phone: 99999999999</p>
           <p className='mb-2'> <FontAwesomeIcon icon={['fas', 'location-dot']} className="mr-2 font1"/> 
-          GITAM Medical College, Road,<br/> Yendada, Rushikonda, Visakhapatnam, <br/> Andhra Pradesh 530045
+          GITAM Medical College Road,<br/> Yendada, Rushikonda, Visakhapatnam, <br/> Andhra Pradesh 530045
           </p>
         </div>
         </Col>
