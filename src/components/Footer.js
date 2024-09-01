@@ -46,7 +46,7 @@ const Footer = () => (
           <h5 className='mb-2'>Contact Us</h5>
           <p className='mb-2'> <FontAwesomeIcon icon={['fas', 'envelope']} className="mr-2 font1"/> Email: srikrishnajyothishalayamm@gmail.com</p>
           <p className='mb-2'><FontAwesomeIcon icon={['fas', 'phone']} className="mr-2 font1"/> Phone: +91 7702816455</p>
-          <p className='mb-2'> <FontAwesomeIcon icon={['fas', 'location-dot']} className="mr-2 font1"/> 
+          <p className='mb-2'> <FontAwesomeIcon icon={['fas', 'location-dot']} className="mr-2 font1"/> 1001, B3, Vaisakhi Skyline Apartments <br/> 
           GITAM Medical College Road,<br/> Yendada, Rushikonda, Visakhapatnam, <br/> Andhra Pradesh 530045
           </p>
         </div>
