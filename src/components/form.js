@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import '../assets/css/form.css';
+import emailjs from 'emailjs-com';
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -37,10 +39,6 @@ const RegistrationForm = () => {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }));
-    setFormErrors((prev) => ({
-      ...prev,
-      [name]: '',
     }));
   };
 
@@ -101,29 +99,58 @@ const RegistrationForm = () => {
     setFormErrors(errors);
     return isValid;
   };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     if (!validateForm()) {
       return;
     }
-
+  
+    setIsLoading(true);
+  
     const formEle = document.querySelector("form");
     const formDatab = new FormData(formEle);
-    
-    setIsLoading(true);
-
-    fetch("https://script.google.com/macros/s/AKfycbzYg6d3SNlsTQM6gVPzECptSAYITMMJ15XsxKjAQGTEB9VCIFAf7FBHHrFDdH2NpzLggQ/exec", {
-      method: "POST",
-      body: formDatab
-    })
-      .then((res) => res.text()) // Use res.text() instead of res.json() for text response
+  
+    const templateParams = {
+      to_name: "Your Name", 
+      from_name: formData.Name,
+      name: formData.Name,
+      age: formData.Age,
+      gender: formData.Gender,
+      marital_status: formData.MaritalStatus,
+      dob: formData.DateOfBirth,
+      tob: formData.TimeOfBirth,
+      pob: formData.PlaceOfBirth,
+      address: formData.ResidentialAddress,
+      whatsapp: formData.WhatsappNumber,
+      occupation: formData.Occupation,
+      hobbies: formData.Hobbies,
+      visit_purpose: formData.PurposeOfVisit,
+    };
+  
+    emailjs.send(
+      'service_0was3jc',    
+      'template_v2vhxan',   
+      templateParams,
+      'sVb-VUYpp6UP3P_YF'  
+    )
+    .then(() => {
+      fetch('https://script.google.com/macros/s/AKfycbzYg6d3SNlsTQM6gVPzECptSAYITMMJ15XsxKjAQGTEB9VCIFAf7FBHHrFDdH2NpzLggQ/exec',
+        {
+          method: "POST",
+          body: formDatab,
+          headers: {
+            'Accept': 'application/json',
+          },
+        })
+      .then((response) => response.text())
       .then((data) => {
-        console.log("Response from Google Apps Script:", data); // Debugging line
-        if (data.includes("successfully sent")) { // Check if the response contains the success message
+        console.log("Response from Google Apps Script:", data);
+        if (data.includes("successfully sent")) {
           setIsLoading(false);
-          setAlertMessage("Successfully submitted"); // Show alert
+          setAlertMessage("Form submitted successfully!");
+          // Reset form data
           setFormData({
             Name: '',
             Age: '',
@@ -144,10 +171,19 @@ const RegistrationForm = () => {
         }
       })
       .catch((error) => {
-        console.error("Error submitting form:", error);
+        console.error("Error submitting form to Google Sheets:", error);
         setIsLoading(false);
       });
+    })
+    .catch((error) => {
+      console.log("Error sending email:", error.text);
+      setIsLoading(false);
+      setAlertMessage("Submission failed. Please try again.");
+    });
   };
+  
+  
+  
   
 
   return (
