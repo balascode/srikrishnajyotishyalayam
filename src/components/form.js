@@ -113,7 +113,7 @@ const RegistrationForm = () => {
     const formDatab = new FormData(formEle);
   
     const templateParams = {
-      to_name: "Your Name", 
+      to_name: "SRI KRISHNA JYOTHISHALAYAM", 
       from_name: formData.Name,
       name: formData.Name,
       age: formData.Age,
