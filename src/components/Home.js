@@ -194,10 +194,14 @@ t.from('.image2',{x:-100,duration:1})
         </Container>
       </div>
 
-      {/* <div id="review-section2" className="additional-section whole-container bgreview p-0 d-block d-lg-none">
-        <h1 className='text-center text-dark mb-5 mt-0'> REVIEWS </h1>
-      </div> */}
-
+      <a
+      href="https://wa.me/7702816455"
+      className="whatsapp-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fab fa-whatsapp"></i>
+    </a>
     </div>
   );
 };
